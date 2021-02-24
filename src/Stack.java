@@ -18,7 +18,7 @@ class Run {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
 
-        int[] x = new int[]{56, 34, 1, 45, 7, 9};
+        int[] x = new int[]{56, 34, 1, 45, 7};
         for (int j = 0; j < x.length; j++) {
             if (x.length <= 5) {
                 stack_push(stack, x[j]);
