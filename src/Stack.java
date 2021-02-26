@@ -1,25 +1,25 @@
 
 class Run {
-        public static void main(String[] args) {
-            int[] pushArg = new int[]{56, 34, 1, 45, 7};
-            Stacks stack = new Stacks(pushArg);
+    public static void main(String[] args) {
+        //int[] pushArg = new int[]{56, 34, 1, 45, 7};
+        Stack[] stack = new Stack[5];
+       stack.toString();
 
-            stack.stackPush(pushArg);
-            stack.stackPop(pushArg);
-        }
+    }
+}
 
-    static class Stacks {
-            int[] push;
-            int[] pop;
-            Stacks(int[] pushArg){
+class Stack {
+           int[] push;
+
+           Stack(int[] pushArg){
                push = pushArg;
-               pop = pushArg;
+
             }
 
-            public int[] stackPush(int[] push) {
+            public void push(int[] push) {
 
             int index = 0;
-            for (int j = 0; j < push.length; j++) {
+            for (int j = 0; j < 5; j++) {
                 index++;
                 if (push.length <= 5) {
                     System.out.println("push -> " + push[j]);
@@ -34,10 +34,10 @@ class Run {
                 }
                 System.out.println();
             }
-    return push;
+
         }
 
-        public void stackPop(int[] pop) {
+        public void pop(int[] pop) {
             int index = 0;
             System.out.println();
             for (int i = pop.length - 1; i >= 0; i--) {
@@ -55,6 +55,10 @@ class Run {
                 System.out.println();
             }
         }
-    }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
+
