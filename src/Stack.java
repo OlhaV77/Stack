@@ -1,26 +1,26 @@
 
-
 class Run {
         public static void main(String[] args) {
+            int[] pushArg = new int[]{56, 34, 1, 45, 7};
+            Stacks stack = new Stacks(pushArg);
 
-            StackPush stack = new StackPush();
-            int[] push = new int[]{56, 34, 1, 45, 7};
-
-            stack.stack_push(push);
-            stack.stack_pop(push);
+            stack.stackPush(pushArg);
+            stack.stackPop(pushArg);
         }
 
+    static class Stacks {
+            int[] push;
+            int[] pop;
+            Stacks(int[] pushArg){
+               push = pushArg;
+               pop = pushArg;
+            }
 
-
-
-    static class StackPush {
-
-        public void stack_push(int[] push) {
+            public int[] stackPush(int[] push) {
 
             int index = 0;
             for (int j = 0; j < push.length; j++) {
                 index++;
-
                 if (push.length <= 5) {
                     System.out.println("push -> " + push[j]);
                 }
@@ -34,22 +34,22 @@ class Run {
                 }
                 System.out.println();
             }
-
+    return push;
         }
 
-        public void stack_pop(int[] push) {
+        public void stackPop(int[] pop) {
             int index = 0;
             System.out.println();
-            for (int i = push.length - 1; i >= 0; i--) {
+            for (int i = pop.length - 1; i >= 0; i--) {
                 index++;
-                System.out.println("pop -> " + push[i]);
+                System.out.println("pop -> " + pop[i]);
 
-                if (push.length == 0) {
+                if (pop.length == 0) {
                     System.out.println("There is nothing on the stack");
                 }
                 System.out.print("stack -> ");
-                for (int j = 0; j < push.length - index; j++) {
-                    System.out.print(push[j] + " ");
+                for (int j = 0; j < pop.length - index; j++) {
+                    System.out.print(pop[j] + " ");
 
                 }
                 System.out.println();
