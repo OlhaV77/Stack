@@ -37,35 +37,20 @@ class Stack {
     int count = 0;
 
     public void push(int num) {
-
-        if (count == 0) {
-            System.out.println("There is nothing on the stack");
-        }
-
         if (count == 5) {
             System.out.println("Can't  add anymore");
         } else {
             storage[count] = num;
             count++;
         }
-        for (int i = 0; i < count; i++) {
-            System.out.print(storage[i] + " ");
-        }
-        System.out.println();
     }
 
     public int pop() {
         count--;
-
-        for (int i = 0; i < count; i++) {
-            System.out.print(storage[i] + " ");
-
+        if (count == 0) {
+            System.out.println("There is nothing on the stack");
         }
-       // return storage[count];
-       // count--;
         return storage[count];
     }
-
-
 }
 
