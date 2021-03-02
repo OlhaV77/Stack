@@ -37,13 +37,17 @@ class Stack {
     int count = 0;
 
     public void push(int num) {
-        storage[count] = num;
 
         if (count == 0) {
             System.out.println("There is nothing on the stack");
         }
-        count++;                   //1, 2, 3,4
 
+        if (count == 5) {
+            System.out.println("Can't  add anymore");
+        } else {
+            storage[count] = num;
+            count++;
+        }
         for (int i = 0; i < count; i++) {
             System.out.print(storage[i] + " ");
         }
@@ -51,17 +55,17 @@ class Stack {
     }
 
     public int pop() {
-        count--;                 //3,2,1
+        count--;
+
         for (int i = 0; i < count; i++) {
             System.out.print(storage[i] + " ");
-            if (count > 5) {
-                System.out.println("Can't add anymore.");
-            }
+
         }
-        // return storage[count]
-        // count--;
+       // return storage[count];
+       // count--;
         return storage[count];
     }
 
 
 }
+
