@@ -16,3 +16,27 @@
   Bonus points:		
  - When stack is full and push new data - display "can't add anymore"		
  - When stack is empty and pop the data - display "there is nothing on the stack"
+
+
+
+
+
+ public void push() {
+
+        if (position == 5) {
+            System.out.println("Can't  add anymore");
+        } else {
+            storage[position] = number;
+            position++;
+        }
+    }
+
+    public int pop() {
+        if (position < 1) {
+            System.out.println("There is nothing on the stack");
+        } else {
+            position--;
+        }
+
+        return storage[position];
+    }
