@@ -1,5 +1,5 @@
 // Exceptions: checked vs unchecked
-
+import java.io.*;
 
 public class Stack {
     private int[] storage = new int[5];
@@ -15,13 +15,17 @@ public class Stack {
     }
 
     // TODO: modify to throw an exception when empty stack
-    public int pop() {
-        if (position < 1) {
-            System.out.println("There is nothing on the stack");
-        } else {
-            position--;
-        }
+    public int pop() throws ArrayIndexOutOfBoundsException {
+        try {
+            if (position < 1) {
+                System.out.println("There is nothing on the stack");
+            } else {
+                position--;
+           }
+        } catch (ArrayIndexOutOfBoundsException e) {
 
+
+        }
         return storage[position];
     }
 }

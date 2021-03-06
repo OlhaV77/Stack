@@ -16,6 +16,7 @@ class Run {
         stacks[0].pop();
         stacks[0].pop();
         stacks[0].pop();
+        stacks[0].pop();
 
         stacks[0].push(90);
         stacks[0].push(11);
