@@ -9,7 +9,7 @@ class Run {
             stacks[0].push(1);
             stacks[0].push(8);
             stacks[0].push(7);
-        } catch (PushException e) {
+        } catch (InnerPush.PushException e) {
             System.out.println(e.getMessage());
         }
 
@@ -21,14 +21,14 @@ class Run {
             stacks[0].pop();
             stacks[0].pop();
             stacks[0].pop();
-        } catch (PopException e) {
+        } catch (InnerPop.PopException e) {
             System.out.println(e.getMessage());
         }
 
         try {
             stacks[0].push(90);
             stacks[0].push(11);
-        } catch (PushException e) {
+        } catch (InnerPush.PushException e) {
             System.out.println(e.getMessage());
         }
 

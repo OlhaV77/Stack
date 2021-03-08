@@ -11,18 +11,18 @@ public class Stack {
     private int[] storage = new int[5];
     private int position;
 
-    public void push(int number) throws PushException {
+    public void push(int number) throws InnerPush.PushException {
         if (position == 5) {
-           throw new PushException("Can't  add anymore");
+           throw new InnerPush.PushException("Can't  add anymore");
         } else {
             storage[position] = number;
             position++;
         }
     }
 
-    public int pop() throws PopException {
+    public int pop() throws InnerPop.PopException {
         if (position < 1) {
-            throw new PopException( "There is nothing on the stack");
+            throw new InnerPop.PopException( "There is nothing on the stack");
         } else {
             position--;
        }
@@ -30,13 +30,3 @@ public class Stack {
     }
 }
 
-class PushException extends Exception{
-    PushException(String message){
-        super(message);
-    }
-}
-class PopException extends Exception{
-    PopException(String message){
-        super(message);
-    }
-}

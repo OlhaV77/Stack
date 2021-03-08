@@ -33,6 +33,6 @@ Bonus points:
 ## Stack length management task:
 
 - Add: ability to increase stack length by size of 5 via method call `increase()`
-- Add: ability to decrease stack length by szie of 5 via method call `decrease()`
+- Add: ability to decrease stack length by size of 5 via method call `decrease()`
 
 Note: above operations are NON-destructive!

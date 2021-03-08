@@ -9,17 +9,17 @@ public class Test {
                 stack[0].push(storage[i]);
             }
 
-        } catch (PushException e) {
+        } catch (InnerPush.PushException e) {
             System.out.println(e.getMessage());
         }
 
         try {
-            int i =0;
+            int i = 0;
             while ((i < 6)) {
                 stack[0].pop();
                 i++;
             }
-        } catch (PopException e) {
+        } catch (InnerPop.PopException e) {
             System.out.println(e.getMessage());
         }
     }
