@@ -1,9 +1,10 @@
-public class InnerPush {
-    static class PushException extends Exception{
-        PushException(String message){
+public  class PushException extends Exception {
+        PushException(String message) {
             super(message);
         }
-    }/*
+    }
+
+    /*
     int increase(int num){
         Stack[] stack = new Stack[10];
         stack[0] = new Stack();
@@ -19,11 +20,11 @@ public class InnerPush {
                 longs++;
             }
 
-        } catch (InnerPush.PushException e) {
+        } catch (PushException.PushException e) {
             System.out.println(e.getMessage());
         }
         return num;
     }
 
     */
-}
+

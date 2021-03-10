@@ -1,6 +1,4 @@
 class Run {
-
-
     public static void main(String[] args) {
         Stack[] stacks = new Stack[10];     // Fix this
         stacks[0] = new Stack();
@@ -14,7 +12,7 @@ class Run {
             stacks[0].push(1);
             stacks[0].push(8);
             stacks[0].push(7);
-        } catch (InnerPush.PushException e) {
+        } catch (PushException e) {
             System.out.println(e.getMessage());
         }
 
@@ -26,14 +24,14 @@ class Run {
             stacks[0].pop();
             stacks[0].pop();
             stacks[0].pop();
-        } catch (InnerPop.PopException e) {
+        } catch (PopException e) {
             System.out.println(e.getMessage());
         }
 
         try {
             stacks[0].push(90);
             stacks[0].push(11);
-        } catch (InnerPush.PushException e) {
+        } catch (PushException e) {
             System.out.println(e.getMessage());
         }
     }

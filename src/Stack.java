@@ -1,7 +1,5 @@
 // Exceptions: checked vs unchecked
 
-import java.io.*;
-
 // MUST BE IN WRITTEN FORM
 // Formulate the question:
 // What have I tried?
@@ -13,18 +11,18 @@ public class Stack {
     private int[] storage = new  int[5];
 
 
-    public void push(int number) throws InnerPush.PushException {
+    public void push(int number) throws PushException {
         if (position == 5) {
-            throw new InnerPush.PushException("Can't  add anymore");
+            throw new PushException("Can't  add anymore");
         } else {
             storage[position] = number;
             position++;
         }
     }
 
-    public int pop() throws InnerPop.PopException {
+    public int pop() throws PopException {
         if (position < 1) {
-            throw new InnerPop.PopException("There is nothing on the stack");
+            throw new PopException ("There is nothing on the stack");
         } else {
             position--;
         }

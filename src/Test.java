@@ -14,7 +14,7 @@ class Test1 {
         stacks[1] = new Stack();
 
 
-        try {
+
             int size = 0;
             int[] storage;
             int num = 2;
@@ -23,30 +23,22 @@ class Test1 {
 
                 storage = new int[size];
                 for (int i = 0; i < size; i++) {
-                    stacks[1].push(storage[i]);
+                   // stacks[1].push(storage[i]);
                 }
                 num++;
                 size++;
             }
-        } catch (
-                InnerPush.PushException e) {
-            System.out.println(e.getMessage());
-        }
-
     }
 
     void decrease() {
         Stack[] stacks = new Stack[10];
         stacks[1] = new Stack();
-        try {
+
             int i = 0;
             while ((i < 6)) {
-                stacks[1].pop();
+               // stacks[1].pop();
                 i++;
             }
-        } catch (InnerPop.PopException e) {
-            System.out.println(e.getMessage());
-        }
     }
 }
 
