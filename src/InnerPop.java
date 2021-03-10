@@ -4,5 +4,7 @@ public class InnerPop {
             super(message);
         }
     }
-
+int decrease(){
+        return 0;
+}
 }

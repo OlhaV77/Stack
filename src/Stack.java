@@ -1,4 +1,5 @@
 // Exceptions: checked vs unchecked
+
 import java.io.*;
 
 // MUST BE IN WRITTEN FORM
@@ -8,12 +9,13 @@ import java.io.*;
 
 
 public class Stack {
-    private int[] storage = new int[5];
     private int position;
+    private int[] storage = new  int[5];
+
 
     public void push(int number) throws InnerPush.PushException {
         if (position == 5) {
-           throw new InnerPush.PushException("Can't  add anymore");
+            throw new InnerPush.PushException("Can't  add anymore");
         } else {
             storage[position] = number;
             position++;
@@ -22,10 +24,10 @@ public class Stack {
 
     public int pop() throws InnerPop.PopException {
         if (position < 1) {
-            throw new InnerPop.PopException( "There is nothing on the stack");
+            throw new InnerPop.PopException("There is nothing on the stack");
         } else {
             position--;
-       }
+        }
         return storage[position];
     }
 }

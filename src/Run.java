@@ -1,7 +1,12 @@
 class Run {
+
+
     public static void main(String[] args) {
-        Stack[] stacks = new Stack[10]; // Fix this
+        Stack[] stacks = new Stack[10];     // Fix this
         stacks[0] = new Stack();
+        stacks[1] = new Stack();
+
+
         try {
             stacks[0].push(2);
             stacks[0].push(34);
@@ -31,33 +36,5 @@ class Run {
         } catch (InnerPush.PushException e) {
             System.out.println(e.getMessage());
         }
-
-/*
-        stacks[1] = new Stack();
-        try {
-            int[] storage = {0, 9, 8, 7, 78, 45, 34};
-            for (int i = 0; i < storage.length; i++) {
-                stacks[1].push(storage[i]);
-            }
-        }
-        catch (PushException e) {
-            System.out.println(e.getMessage());
-        }
-        try {
-            int count = 0;
-            count++;
-            if (count >= 5) {
-                stacks[1].pop();
-            }
-        }
-        catch (PopException e){
-            System.out.println(e.getMessage());
-        }
-
-
- */
-
     }
-
-
 }
