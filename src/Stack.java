@@ -15,15 +15,20 @@ public class Stack {
 
     Stack (int size ) {
         this.size = size;
-        this.storage = new  int[defaultSize + size];
-    }
-    Stack(){
-        this.storage = new int[defaultSize + size];
-    }
+        if(size > defaultSize){
+            this.storage = new  int[size];
+        }else {
+            this.storage = new int[defaultSize];
+        }
 
+    }
+    Stack() {
+        this.storage = new int[defaultSize];
+
+    }
 
     public void push(int number) throws PushException {
-        if (position == 5) {
+        if (position == storage.length) {
             throw new PushException("Can't  add anymore");
         } else {
             storage[position] = number;
