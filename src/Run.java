@@ -1,10 +1,11 @@
 class Run {
     public static void main(String[] args) {
         Stack[] stacks = new Stack[10];     // Fix this
-
-        stacks[0] = new Stack(50);
+        stacks[0] = new Stack(6);
+        stacks[0].increase();
 
         try {
+
             stacks[0].push(2);
             stacks[0].push(34);
             stacks[0].push(35);
@@ -14,6 +15,7 @@ class Run {
         } catch (PushException e) {
             System.out.println(e.getMessage());
         }
+        stacks[0].decrease();
 
         try {
             stacks[0].pop();

@@ -8,17 +8,21 @@
 
 public class Stack {
     private int position;
-    private Object[] storage;
+    private int[] storage;
     private int size;
 
     Stack(int size) {
         this.size = size;
-        this.storage = new Object [size];
+        this.storage = new int[size];
     }
 
-    public void increase() {
+    public int increase() {
+        return size + 5;
+    }
 
-
+    public int decrease() {
+        int newSize = increase();
+        return newSize -5;
     }
 
     public void push(int number) throws PushException {
@@ -37,7 +41,7 @@ public class Stack {
         } else {
             position--;
         }
-        return (int) storage[position];
+        return storage[position];
     }
 }
 
