@@ -9,7 +9,7 @@
 public class Stack {
     private int position;
     private int[] storage;
-    int size;
+    int size ;
 
 
     Stack(int size) {
@@ -20,6 +20,13 @@ public class Stack {
     Stack() {
         this.storage = new int[size];
 
+    }
+
+    int increase() {
+
+
+
+        return 0;
     }
 
     public void push(int number) throws PushException {
