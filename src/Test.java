@@ -1,6 +1,6 @@
 public class Test {
     public static void main(String[] args) throws PushException {
-        Stack stack = new Stack(2);
+        Stack stack = new Stack(4);
         try {
 
             stack.push(4);

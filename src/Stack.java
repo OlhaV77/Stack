@@ -8,22 +8,17 @@
 
 public class Stack {
     private int position;
-    private int[] storage ;
-    int defaultSize = 5;
-    int size ;
+    private int[] storage;
+    int size;
 
 
-    Stack (int size ) {
+    Stack(int size) {
         this.size = size;
-        if(size > defaultSize){
-            this.storage = new  int[size];
-        }else {
-            this.storage = new int[defaultSize];
-        }
-
+        this.storage = new int[size];
     }
+
     Stack() {
-        this.storage = new int[defaultSize];
+        this.storage = new int[size];
 
     }
 
