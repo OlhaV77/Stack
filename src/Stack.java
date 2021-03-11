@@ -8,8 +8,18 @@
 
 public class Stack {
     private int position;
-    private int[] storage = new  int[5];
+    private Object[] storage;
+    private int size;
 
+    Stack(int size) {
+        this.size = size;
+        this.storage = new Object [size];
+    }
+
+    public void increase() {
+
+
+    }
 
     public void push(int number) throws PushException {
         if (position == 5) {
@@ -17,16 +27,17 @@ public class Stack {
         } else {
             storage[position] = number;
             position++;
+
         }
     }
 
     public int pop() throws PopException {
         if (position < 1) {
-            throw new PopException ("There is nothing on the stack");
+            throw new PopException("There is nothing on the stack");
         } else {
             position--;
         }
-        return storage[position];
+        return (int) storage[position];
     }
 }
 
