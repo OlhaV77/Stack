@@ -8,22 +8,14 @@
 
 public class Stack {
     private int position;
-    private int[] storage;
-    private int size;
+    private int[] storage = new int[5];
+    int[] numStorage;
+    int size;
 
-    Stack(int size) {
-        this.size = size;
-        this.storage = new int[size];
+    Stack() {
+        this.numStorage = new int[storage.length + size];
     }
 
-    public int increase() {
-        return size + 5;
-    }
-
-    public int decrease() {
-        int newSize = increase();
-        return newSize -5;
-    }
 
     public void push(int number) throws PushException {
         if (position == 5) {

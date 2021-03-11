@@ -1,29 +1,28 @@
 public class Test {
-    private int position;
-    private int[] storage;
-    private int size;
+    public static void main(String[] args) throws PushException {
+        Stack stack = new Stack();
+        try {
 
-    Test(int size) {
-        this.size = size;
-        this.storage = new int[size];
-    }
-
-    public int increase() {
-        int newSize = size + 5;
-        if(size < newSize){     //6<11
-
-            for(int i = 0; i < 5; i++) {
-                size++;
-                System.out.println(size);
-            }
+            stack.push(4);
+            stack.push(5);
+            stack.push(8);
+            stack.push(9);
+            stack.push(7);
+            stack.push(78);
+        } catch (PushException e) {
+            System.out.println(e.getMessage());
         }
-        return size ;
-    }
-
-    public static void main(String[] args) {
-        Test test = new Test(6);
-        test.increase();
-
+        try {
+            stack.pop();
+            stack.pop();
+            stack.pop();
+            stack.pop();
+            stack.pop();
+            stack.pop();
+        }
+        catch (PopException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
 
