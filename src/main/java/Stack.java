@@ -9,6 +9,7 @@
 public class Stack {
     private int position;
     private int[] storage;
+    private int[] newStorage;
 
     Stack(int size) {                                  //overload method , which indicates the size
         this.storage = new int[size];
@@ -16,17 +17,14 @@ public class Stack {
 
     Stack() {                                       // overload method , which indicate the another size
         this.storage = new int[5];
-        storage = increase();
-        storage = decrease();
     }
 
-    int[] increase() {
-        return new int[storage.length + 5];
+    void increase() {
+     storage =   new int[storage.length + 5];
     }
 
-    int[] decrease(){
-        storage = increase();
-        return new int[storage.length - 5];
+    void decrease(){
+       storage =  new int[storage.length - 5];
     }
 
     public void push(int number) throws PushException {
