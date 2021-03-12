@@ -9,28 +9,23 @@
 public class Stack {
     private int position;
     private int[] storage;
-    int size ;
 
-
-    Stack(int size) {
-        this.size = size;
+    Stack(int size) {                                  //overload method , which indicates the size
         this.storage = new int[size];
     }
 
-    Stack() {
-        this.storage = new int[size];
-
+    Stack() {                                       // overload method , which indicate the another size
+        this.storage = new int[5];
     }
 
     int increase() {
-       int newSize = 5;
-
-
-       return 0;
+        int num = storage.length + 5;
+        System.out.println(num);
+        return num;
     }
 
     public void push(int number) throws PushException {
-        if (position == storage.length) {
+        if (position == storage.length) {                              //position element = storage length
             throw new PushException("Can't  add anymore");
         } else {
             storage[position] = number;
@@ -40,7 +35,7 @@ public class Stack {
     }
 
     public int pop() throws PopException {
-        if (position < 1) {
+        if (position < 1) {                                                 //position < 1 (равна 0)
             throw new PopException("There is nothing on the stack");
         } else {
             position--;
