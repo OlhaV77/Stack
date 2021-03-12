@@ -16,12 +16,11 @@ public class Stack {
 
     Stack() {                                       // overload method , which indicate the another size
         this.storage = new int[5];
+        storage = increase();
     }
 
-    int increase() {
-        int num = storage.length + 5;
-        System.out.println(num);
-        return num;
+    int[] increase() {
+        return new int[storage.length + 5];
     }
 
     public void push(int number) throws PushException {
@@ -33,6 +32,7 @@ public class Stack {
 
         }
     }
+
 
     public int pop() throws PopException {
         if (position < 1) {                                                 //position < 1 (равна 0)

@@ -1,8 +1,6 @@
 class Run {
     public static void main(String[] args) {
         Stack[] stacks = new Stack[10];        // Fix this
-
-
         stacks[0] = new Stack();
         stacks[0].increase();
         try {

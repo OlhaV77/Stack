@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.util.Objects;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -22,7 +24,6 @@ public class StackTest {
     @Test
     public void increase_whenDefaultStackIncreased_works() throws PushException, PopException {
         Stack aStack = new Stack();
-
         aStack.increase();
 
         aStack.push(1);
