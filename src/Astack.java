@@ -1,7 +1,8 @@
 public class Astack {
     public static void main(String[] args) throws PushException {
+
         Stack aStack = new Stack();
-        aStack = new Stack(5);
+        aStack = new Stack(aStack.size = 6);
         try {
             aStack.push(1);
             aStack.push(2);

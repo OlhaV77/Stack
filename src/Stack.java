@@ -23,10 +23,10 @@ public class Stack {
     }
 
     int increase() {
+       int newSize = 5;
 
 
-
-        return 0;
+       return 0;
     }
 
     public void push(int number) throws PushException {
