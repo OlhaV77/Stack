@@ -25,6 +25,7 @@ public class StackTest {
     public void increase_whenDefaultStackIncreased_works() throws PushException, PopException {
         Stack aStack = new Stack();
         aStack.increase();
+        aStack.decrease();
 
         aStack.push(1);
         aStack.push(2);
