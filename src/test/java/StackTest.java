@@ -38,6 +38,9 @@ public class StackTest {
         aStack.push(9);
         aStack.push(10);
 
+     //  aStack.decrease();
+
+
         assertThat(aStack.pop()).isEqualTo(10);
         assertThat(aStack.pop()).isEqualTo(9);
         assertThat(aStack.pop()).isEqualTo(8);
@@ -48,6 +51,7 @@ public class StackTest {
         assertThat(aStack.pop()).isEqualTo(3);
         assertThat(aStack.pop()).isEqualTo(2);
         assertThat(aStack.pop()).isEqualTo(1);
+
     }
 
     @Test

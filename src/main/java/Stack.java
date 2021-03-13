@@ -9,7 +9,6 @@
 public class Stack {
     private int position;
     private int[] storage;
-    private int[] newStorage;
 
     Stack(int size) {                                  //overload method , which indicates the size
         this.storage = new int[size];
@@ -20,23 +19,26 @@ public class Stack {
     }
 
     void increase() {
-     storage =   new int[storage.length + 5];
+        storage = new int[storage.length + 5];
     }
 
-    void decrease(){
-       storage =  new int[storage.length - 5];
+    void decrease() {
+        storage = new int[storage.length];
     }
+
 
     public void push(int number) throws PushException {
         if (position == storage.length) {                              //position element = storage length
             throw new PushException("Can't  add anymore");
         } else {
-            storage[position] = number;
-            position++;
 
+              for (int i = 0; i < storage.length; i++) {
+                  position = i;
+                  storage[position] = number;
+
+                    }
         }
     }
-
 
     public int pop() throws PopException {
         if (position < 1) {                                                 //position < 1 (равна 0)
@@ -46,5 +48,6 @@ public class Stack {
         }
         return storage[position];
     }
+
 }
 
