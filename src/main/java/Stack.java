@@ -9,6 +9,7 @@
 public class Stack {
     private int position;
     private int[] storage;
+    private int[] newStorage;
 
     Stack(int size) {                                  //overload method , which indicates the size
         this.storage = new int[size];
@@ -23,7 +24,7 @@ public class Stack {
     }
 
     void decrease() {
-        storage = new int[storage.length];
+        newStorage = new int[storage.length];
     }
 
 
@@ -34,6 +35,10 @@ public class Stack {
             storage[position] = number;
             position++;
         }
+    }
+
+    public void aStoragePlease() {
+        newStorage = storage;
     }
 
     public int pop() throws PopException {
