@@ -31,12 +31,8 @@ public class Stack {
         if (position == storage.length) {                              //position element = storage length
             throw new PushException("Can't  add anymore");
         } else {
-
-              for (int i = 0; i < storage.length; i++) {
-                  position = i;
-                  storage[position] = number;
-
-                    }
+            storage[position] = number;
+            position++;
         }
     }
 

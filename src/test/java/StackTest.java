@@ -38,7 +38,7 @@ public class StackTest {
         aStack.push(9);
         aStack.push(10);
 
-     //  aStack.decrease();
+
 
 
         assertThat(aStack.pop()).isEqualTo(10);
