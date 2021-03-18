@@ -6,10 +6,10 @@
 // What is the result of each attempt
 
 
+
 public class Stack {
     private int position;
     private int[] storage;
-    private int[] newStorage;
 
     Stack(int size) {                                  //overload method , which indicates the size
         this.storage = new int[size];
@@ -20,16 +20,21 @@ public class Stack {
     }
 
     void increase() {
-        storage = new int[storage.length + 5];
+        int[] newStorage = new int[storage.length + 5];             // new storage
+
+        for (int i = 0; i < storage.length; i++) {            // copied all data
+            newStorage[i] = storage[i];
+        }
+
+        storage = newStorage;   // swap old storage for new storage
     }
 
     void decrease() {
-        newStorage = new int[storage.length];
+
     }
 
-
     public void push(int number) throws PushException {
-        if (position == storage.length) {                              //position element = storage length
+        if (position == storage.length) {                        //position  = storage length
             throw new PushException("Can't  add anymore");
         } else {
             storage[position] = number;
@@ -37,9 +42,8 @@ public class Stack {
         }
     }
 
-    public void aStoragePlease() {
-        newStorage = storage;
-    }
+
+
 
     public int pop() throws PopException {
         if (position < 1) {                                                 //position < 1 (равна 0)

@@ -3,6 +3,7 @@ import org.junit.Test;
 import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 
 public class StackTest {
@@ -37,8 +38,6 @@ public class StackTest {
         aStack.push(8);
         aStack.push(9);
         aStack.push(10);
-
-
 
 
         assertThat(aStack.pop()).isEqualTo(10);
@@ -84,5 +83,29 @@ public class StackTest {
         assertThat(aStack.pop()).isEqualTo(1);
     }
 
+    @Test
+    public void decrease_whenStorageHas10Data_cutOffExtraData() throws PushException, PopException {
+        Stack stack = new Stack(10);
 
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(6);
+        stack.push(7);
+        stack.push(8);
+        stack.push(9);
+        stack.push(10);
+
+        stack.decrease();
+
+        assertThat(stack.pop()).isEqualTo(10);
+        assertThat(stack.pop()).isEqualTo(9);
+        assertThat(stack.pop()).isEqualTo(8);
+        assertThat(stack.pop()).isEqualTo(7);
+        assertThat(stack.pop()).isEqualTo(6);
+
+        assertThatThrownBy(() -> stack.pop()).isInstanceOf(PopException.class);
+    }
 }
