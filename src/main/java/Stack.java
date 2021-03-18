@@ -30,6 +30,12 @@ public class Stack {
     }
 
     void decrease() {
+        int[]newStorage = new int[storage.length - 5];            // newStorage = 1,2,3,4,5
+        for(int i = 0; i < storage.length - 5 ; i++){
+            newStorage[i] = storage[i];
+        }
+        storage = newStorage;
+        position = storage.length;
 
     }
 
@@ -48,10 +54,11 @@ public class Stack {
     public int pop() throws PopException {
         if (position < 1) {                                                 //position < 1 (равна 0)
             throw new PopException("There is nothing on the stack");
-        } else {
+        }
+      else {
             position--;
         }
-        return storage[position];
+      return storage[position];
     }
 
 }

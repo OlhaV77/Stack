@@ -100,11 +100,11 @@ public class StackTest {
 
         stack.decrease();
 
-        assertThat(stack.pop()).isEqualTo(10);
-        assertThat(stack.pop()).isEqualTo(9);
-        assertThat(stack.pop()).isEqualTo(8);
-        assertThat(stack.pop()).isEqualTo(7);
-        assertThat(stack.pop()).isEqualTo(6);
+        assertThat(stack.pop()).isEqualTo(5);
+        assertThat(stack.pop()).isEqualTo(4);
+        assertThat(stack.pop()).isEqualTo(3);
+        assertThat(stack.pop()).isEqualTo(2);
+        assertThat(stack.pop()).isEqualTo(1);
 
         assertThatThrownBy(() -> stack.pop()).isInstanceOf(PopException.class);
     }
