@@ -1,37 +1,22 @@
 class Run {
-    public static void main(String[] args) {
-        Stack[] stacks = new Stack[10];        // Fix this
-        stacks[0] = new Stack();
-        stacks[0].increase();
-        try {
-            stacks[0].push(2);
-            stacks[0].push(34);
-            stacks[0].push(35);
-            stacks[0].push(1);
-            stacks[0].push(8);
-            stacks[0].push(7);
-        } catch (PushException e) {
-            System.out.println(e.getMessage());
+    public static void main(String[] args) throws PushException, PopException {
+
+        // Given: random numbers, print them all in reverse order
+        // example: 1,2,3,4,5,6,7,8,10
+        // example output: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+        int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Stack stacks = new Stack(10);
+
+
+        for (int i = 0; i < input.length; i++) {
+            stacks.push(input[i]);
+
         }
-
-
-        try {
-            stacks[0].pop();
-            stacks[0].pop();
-            stacks[0].pop();
-            stacks[0].pop();
-            stacks[0].pop();
-            stacks[0].pop();
-            stacks[0].pop();
-        } catch (PopException e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            stacks[0].push(90);
-            stacks[0].push(11);
-        } catch (PushException e) {
-            System.out.println(e.getMessage());
+        for(int j = 0; j < input.length;j++) {
+           // stacks.pop();
+            System.out.println(stacks.pop());
         }
     }
+
 }
